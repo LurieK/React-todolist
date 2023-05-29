@@ -32,7 +32,7 @@ html, body {
 
 html::before {
     content: '';
-    background-image: url(./img/gabby-conde-sP33SU9vX0k-unsplash.jpg);
+    background-image: url(./gabby-conde-sP33SU9vX0k-unsplash.jpg);
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: top;
