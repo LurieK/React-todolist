@@ -1,13 +1,222 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+@font-face {
+  font-family: 'Gin';
+  src: url('./GinTest-Regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+@font-face {
+    font-family: 'Mrs Eaves';
+    src: url('./Mrs-Eaves-OT-Roman_31443.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+html, body {
+    width: 100%;
+    height: 100%;
 }
+
+.wrapper{
+  display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: center;
+}
+
+html::before {
+    content: '';
+    background-image: url(./img/gabby-conde-sP33SU9vX0k-unsplash.jpg);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: top;
+    opacity: 0.4;
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+.work {
+    grid-column: 1;
+ 
+}
+
+.life {
+    grid-column: 2;
+ 
+}
+
+.joy {
+    grid-column: 3;
+
+}
+
+h1 {
+    font-family: 'gin', serif;
+    font-size: 80px;
+    font-weight: lighter;
+    margin-left: 20px;
+    margin-top: 20px;
+    opacity: 90%;
+    color: #004D1A;
+    text-align: center;
+  
+}
+
+button {
+    border: hidden;
+    background-color: #891D5D;
+    font-size: 20px;
+    color: white;
+    font-family:'Mrs Eaves';;
+    
+}
+
+.clear {
+    padding: 10px;
+    width: 100%;
+}
+
+
+.work-text,
+.life-text,
+.joy-text {
+    font-family: 'Caveat', cursive;
+    font-weight: lighter;
+    font-size: 23px;
+    display:flex;
+    align-items: center;
+
+    
+}
+
+.workItems,
+.lifeItems,
+.joyItems {
+    display: flex;
+    flex-flow: column;
+    align-items: flex-start;
+    margin-left: 5rem;
+}
+
+ul {
+    list-style: none;
+}
+
+
+.completed {
+    text-decoration: line-through;
+    font-family: 'Caveat', cursive;
+    font-weight: lighter;
+    font-size: 23px;
+    display:flex;
+    align-items: center;
+    
+  }
+
+#completed {
+    width: 15px;
+   
+   
+}
+
+
+input[type = "checkbox"]{
+    
+    accent-color: #b98d9a ;
+    
+}
+.list{
+    display: flex;
+    justify-content: center;
+    flex-flow: row;
+}
+
+h3 {
+    font-family: 'Mrs Eaves';
+    font-weight: lighter;
+    font-size: 35px;
+    margin: 20px;
+    display: flex;
+    justify-content: center;
+    margin-top: 4rem;
+}
+
+h4 {
+    font-family: 'Mrs Eaves';
+    font-size: 20px;
+    font-weight: lighter;
+}
+input {
+    font-family: 'Mrs Eaves';
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+}
+form {
+    display: flex;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 1160px){
+    h1 {
+        
+        grid-area: 1/1/1/span 3;
+        font-size: 70px;
+        padding-left: 10px;
+        padding-right: 10px;
+       
+    }
+}
+
+
+@media screen and (max-width: 1000px){
+
+    html::before {
+        background-size: cover;
+        
+        
+    }
+    
+    .work {
+        grid-row-start: 2;
+        grid-column-start: 2;
+        
+    }
+    
+    .life {
+        grid-row-start: 3;
+        grid-column-start: 2;
+        
+
+    }
+    
+    .joy {
+        grid-row-start: 4;
+        grid-column-start: 2;
+        
+    }
+
+    h1 {
+        
+        font-size: 60px;   
+    }
+
+    .clear {
+        padding: 15px;
+        font-size: 20px;
+        
+    }
+}
+
+
