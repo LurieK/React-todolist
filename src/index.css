@@ -1,15 +1,10 @@
-
-
-
-
-
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
 @font-face {
-  font-family: 'Gin';
-  src: url('./GinTest-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'Gin';
+    src: url('./GinTest-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
 
 @font-face {
@@ -17,15 +12,16 @@
     src: url('./Mrs-Eaves-OT-Roman_31443.woff') format('woff');
     font-weight: normal;
     font-style: normal;
-  }
+}
 
-html, body {
+html,
+body {
     width: 100%;
     height: 100%;
 }
 
-.wrapper{
-  display: grid;
+.wrapper {
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     justify-items: center;
 }
@@ -43,21 +39,18 @@ html::before {
     left: 0;
     width: 100%;
     height: 100%;
-  }
+}
 
 .work {
     grid-column: 1;
- 
 }
 
 .life {
     grid-column: 2;
- 
 }
 
 .joy {
     grid-column: 3;
-
 }
 
 h1 {
@@ -69,7 +62,6 @@ h1 {
     opacity: 90%;
     color: #004D1A;
     text-align: center;
-  
 }
 
 button {
@@ -77,8 +69,7 @@ button {
     background-color: #891D5D;
     font-size: 20px;
     color: white;
-    font-family:'Mrs Eaves';;
-    
+    font-family: 'Mrs Eaves';
 }
 
 .clear {
@@ -86,17 +77,14 @@ button {
     width: 100%;
 }
 
-
 .work-text,
 .life-text,
 .joy-text {
     font-family: 'Caveat', cursive;
     font-weight: lighter;
     font-size: 23px;
-    display:flex;
+    display: flex;
     align-items: center;
-
-    
 }
 
 .workItems,
@@ -112,30 +100,24 @@ ul {
     list-style: none;
 }
 
-
 .completed {
     text-decoration: line-through;
     font-family: 'Caveat', cursive;
     font-weight: lighter;
     font-size: 23px;
-    display:flex;
+    display: flex;
     align-items: center;
-    
-  }
+}
 
 #completed {
     width: 15px;
-   
-   
 }
 
-
-input[type = "checkbox"]{
-    
-    accent-color: #b98d9a ;
-    
+input[type="checkbox"] {
+    accent-color: #b98d9a;
 }
-.list{
+
+.list {
     display: flex;
     justify-content: center;
     flex-flow: row;
@@ -156,67 +138,57 @@ h4 {
     font-size: 20px;
     font-weight: lighter;
 }
+
 input {
     font-family: 'Mrs Eaves';
     width: 200px;
     height: 40px;
     font-size: 20px;
 }
+
 form {
     display: flex;
     justify-content: center;
 }
 
 
-@media screen and (max-width: 1160px){
+@media screen and (max-width: 1160px) {
     h1 {
-        
         grid-area: 1/1/1/span 3;
         font-size: 70px;
         padding-left: 10px;
         padding-right: 10px;
-       
     }
 }
 
 
-@media screen and (max-width: 1000px){
+@media screen and (max-width: 1000px) {
 
     html::before {
         background-size: cover;
-        
-        
     }
-    
+
     .work {
         grid-row-start: 2;
         grid-column-start: 2;
-        
     }
-    
+
     .life {
         grid-row-start: 3;
         grid-column-start: 2;
-        
-
     }
-    
+
     .joy {
         grid-row-start: 4;
         grid-column-start: 2;
-        
     }
 
     h1 {
-        
-        font-size: 60px;   
+        font-size: 60px;
     }
 
     .clear {
         padding: 15px;
         font-size: 20px;
-        
     }
 }
-
-
