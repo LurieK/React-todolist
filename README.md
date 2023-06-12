@@ -1,70 +1,62 @@
-# Getting Started with Create React App
+# Daily To-Dos
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This is a React application that allows you to manage your daily todos in different categories such as Work, Self Care, and Pleasure. You can add new todos, mark them as completed, and clear the todo lists when needed.
 
-## Available Scripts
+## Getting Started
 
-In the project directory, you can run:
+To run the application locally, follow these steps:
 
-### `npm start`
+1. Clone the repository:
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+   ```bash
+   git clone https://github.com/LurieK/DailyToDos.git
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+2. Navigate to the project directory:
+   ```bash
+   cd DailyToDos
 
-### `npm test`
+3. Install the dependencies:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+   ```bash
+   npm install
 
-### `npm run build`
+4. Start the application:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+   ```bash
+   npm start
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+5. Open your web browser and visit http://localhost:3000 to access React-ToDo.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### or
 
-### `npm run eject`
+to view this site visit https://luriek.github.io/DailyToDos/
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Usage
+- Creating a Task: To create a new task, enter a title in the input field at the top of the page and press Enter. 
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Marking a Task as Complete: Click on the checkbox next to a task to mark it as complete. Completed tasks will appear crossed out to deliniate them from active tasks.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- Deleting Tasks: To delete tasks, click on the clear button bellow the item list.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Local Storage: Task data is automatically saved to the local storage of your browser, allowing you to access your tasks even after closing and reopening the application.
 
-## Learn More
+## How to understand this site
+Daily To-Dos is a web application designed to help users organize their day while leaving room for self-care and daily pleasures. The primary goal of the app is to provide a tool that promotes a balanced approach to task management and personal well-being.  
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Out side of the traditional daily tasks related to work and business, this app aims to help users plan out a more holistic day that prioritizes all aspects of life. 
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### Self-Care
+Self-care encompasses activities that individuals engage in to care for their health, maintain relationships, and keep their home and life running smoothly. React-ToDo allows users to allocate time for essential tasks related to their well-being. Whether it's cleaning the kitchen, picking up a prescription, or making an important phone call to a family member, the app reminds users to prioritize these actions that contribute to their overall health and happiness.
 
-### Code Splitting
+### Pleasure
+In addition to managing essential tasks, Daily To-dos emphasizes the significance of incorporating enjoyable activities and experiences into daily routines. The app encourages users to embrace and savor the beauty of life by making time for daily pleasures. This could involve watching a breathtaking sunset, working from a favorite café, or indulging in the creation of a beloved dish. By highlighting the importance of such activities, this app promotes a more holistic and fulfilling approach to task management.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The combination of self-care and daily pleasures within Daily To-Dos aims to provide users with a comprehensive tool for managing tasks and prioritizing their well-being. By incorporating these principles into their daily routines, users can cultivate a sense of balance, fulfillment, and joy in their lives.
 
-### Analyzing the Bundle Size
+## Contributing
+This app is a simple demo project and is not currently accepting contributions. However, if you find a bug or have a feature request, feel free to open an issue on the GitHub repository.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## License
 
-### Making a Progressive Web App
+[MIT](https://choosealicense.com/licenses/mit/)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
