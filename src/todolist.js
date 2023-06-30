@@ -21,7 +21,7 @@ function TodoList({setTodos, listName, todos }){
         setText("");
       }
 
-      const clearToDo= (listName)=> {
+      const clearToDos= (listName)=> {
         setTodos((prevTodos) => 
         ({ ...prevTodos, 
             [listName]: [] 
@@ -73,7 +73,7 @@ function TodoList({setTodos, listName, todos }){
             ))}
           </div>
 
-          <button className="clear" onClick={() => clearToDo()}>
+          <button className="clear" onClick={() => clearToDos()}>
             Clear!
           </button>
         </div>
