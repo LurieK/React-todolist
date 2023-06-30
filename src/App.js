@@ -1,7 +1,9 @@
 import React from "react";
 import useLocalStorageTodos from "./useLocalStorageTodos";
+import Todolist from "./todolist"
 import { useState, useEffect } from "react";
 
+const LIST_NAMES = ['WorkToDo', "LifeToDo", "JoyToDo"]
 function App() {
   // const initialTodos = () => {
   //   const savedLists = localStorage.getItem("todos");
@@ -70,7 +72,7 @@ function App() {
     <div className="App">
       <h1>Daily To-do's</h1>
       <div className="wrapper">
-        
+        {}
       </div>
     </div>
   );

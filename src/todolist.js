@@ -4,7 +4,7 @@ function Todolist({setTodos, listName, todos }){
 
     const [todoText, setTodoText] = useState('');
 
-    function handleSubmit = (e)=>{
+    const handleSubmit = (e)=>{
         e.preventDefault();
     
         const newTodo = {
@@ -21,14 +21,14 @@ function Todolist({setTodos, listName, todos }){
         setText("");
       }
 
-      function clearToDo(listName) {
+      const clearToDo= (listName)=> {
         setTodos((prevTodos) => 
         ({ ...prevTodos, 
             [listName]: [] 
         }));
       }
 
-      function toggleComplete(id) {
+      const toggleComplete= (id)=> {
         let updatedTodos = (todos[listName] || []).map((todo) => {
           return todo.id === id ? {... todo, completed: !todo.completed} : todo;
     
@@ -79,3 +79,5 @@ function Todolist({setTodos, listName, todos }){
         </div>
     )
 }
+
+export default TodoList;
