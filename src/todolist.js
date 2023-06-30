@@ -4,6 +4,23 @@ function Todolist({setTodos, listName, todos }){
 
     const [todoText, setTodoText] = useState('');
 
+    function handleSubmit(e)=> {
+        e.preventDefault();
+    
+        const newTodo = {
+          id: new Date().getTime(),
+          text: todoText,
+          completed: false,
+        };
+    
+        setTodos((prevTodos) => ({
+          ...prevTodos,
+          [listName]: [...prevTodos[listName], newTodo],
+        }));
+    
+        setText("");
+      }
+    
 
     return (
 
@@ -14,7 +31,7 @@ function Todolist({setTodos, listName, todos }){
             onSubmit={(e) => handleSubmit(e, "WorkToDo", worktodo, setWorkTodo)}
           >
             <input
-              type="text"
+              type="todoText"
               onChange={(e) => setWorkTodo(e.target.value)}
               value={worktodo}
             />

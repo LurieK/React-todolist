@@ -28,22 +28,22 @@ function App() {
   // const [lifetodo, setLifeTodo] = useState("");
   // const [joytodo, setJoyTodo] = useState("");
 
-  function handleSubmit(e, listName, text, setText) {
-    e.preventDefault();
+  // function handleSubmit(e, listName, text, setText) {
+  //   e.preventDefault();
 
-    const newTodo = {
-      id: new Date().getTime(),
-      text: text,
-      completed: false,
-    };
+  //   const newTodo = {
+  //     id: new Date().getTime(),
+  //     text: text,
+  //     completed: false,
+  //   };
 
-    setTodos((prevTodos) => ({
-      ...prevTodos,
-      [listName]: [...prevTodos[listName], newTodo],
-    }));
+  //   setTodos((prevTodos) => ({
+  //     ...prevTodos,
+  //     [listName]: [...prevTodos[listName], newTodo],
+  //   }));
 
-    setText("");
-  }
+  //   setText("");
+  // }
 
   function clearToDo(listName) {
     setTodos((prevTodos) => ({ ...prevTodos, [listName]: [] }));
