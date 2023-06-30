@@ -49,22 +49,22 @@ function App() {
   //   setTodos((prevTodos) => ({ ...prevTodos, [listName]: [] }));
   // }
 
-  function toggleComplete(id, listName) {
-    let updatedTodos = todos[listName].map((todo) => {
-      if (todo.id === id) {
-        return {
-          ...todo,
-          completed: !todo.completed,
-        };
-      }
-      return todo;
-    });
+  // function toggleComplete(id, listName) {
+  //   let updatedTodos = todos[listName].map((todo) => {
+  //     if (todo.id === id) {
+  //       return {
+  //         ...todo,
+  //         completed: !todo.completed,
+  //       };
+  //     }
+  //     return todo;
+  //   });
 
-    setTodos((prevTodos) => ({
-      ...prevTodos,
-      [listName]: updatedTodos,
-    }));
-  }
+  //   setTodos((prevTodos) => ({
+  //     ...prevTodos,
+  //     [listName]: updatedTodos,
+  //   }));
+  // }
 
   return (
     <div className="App">
