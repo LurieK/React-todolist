@@ -45,9 +45,9 @@ function App() {
   //   setText("");
   // }
 
-  function clearToDo(listName) {
-    setTodos((prevTodos) => ({ ...prevTodos, [listName]: [] }));
-  }
+  // function clearToDo(listName) {
+  //   setTodos((prevTodos) => ({ ...prevTodos, [listName]: [] }));
+  // }
 
   function toggleComplete(id, listName) {
     let updatedTodos = todos[listName].map((todo) => {

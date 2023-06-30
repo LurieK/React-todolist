@@ -20,6 +20,13 @@ function Todolist({setTodos, listName, todos }){
     
         setText("");
       }
+
+      function clearToDo(listName) {
+        setTodos((prevTodos) => 
+        ({ ...prevTodos, 
+            [listName]: [] 
+        }));
+      }
     
 
     return (
