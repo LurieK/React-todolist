@@ -29,14 +29,9 @@ function Todolist({setTodos, listName, todos }){
       }
 
       function toggleComplete(id) {
-        let updatedTodos = todos[listName].map((todo) => {
-          if (todo.id === id) {
-            return {
-              ...todo,
-              completed: !todo.completed,
-            };
-          }
-          return todo;
+        let updatedTodos = (todos[listName] || []).map((todo) => {
+          return todo.id === id ? {... todo, completed: !todo.completed} : todo;
+    
         });
     
         setTodos((prevTodos) => ({
