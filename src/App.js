@@ -1,4 +1,5 @@
 import React from "react";
+import useLocalStorageTodos from "./useLocalStorageTodos";
 import { useState, useEffect } from "react";
 
 function App() {
@@ -15,7 +16,7 @@ function App() {
   //   };
   // };
 
-  const [todos, setTodos] = useState(initialTodos);
+  const [todos, setTodos] = useLocalStorageTodos();
 
   // useEffect(() => {
   //   const listsToSave = { ...todos };
