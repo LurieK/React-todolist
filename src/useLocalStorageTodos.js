@@ -1,10 +1,11 @@
 import React, {useState, useEffect} from 'react';
 
 function useLocalStorageTodos() {
-    const [todos, setTodos]=useState({});
-}
+    
+const [todos, setTodos]=useState({});
 
-use useEffect(()=> {
+
+useEffect(()=> {
     try {
         const savedTodos= localStorage.getItem('todos');
         setTodos(JSON.parse(savedTodos) || {});
@@ -22,5 +23,5 @@ useEffect (()=> {
 }, [todos]);
 
 return [todos, setTodos];
-
+}
 export default useLocalStorageTodos;

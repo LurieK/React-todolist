@@ -70,7 +70,7 @@ function App() {
     <div className="App">
       <h1>Daily To-do's</h1>
       <div className="wrapper">
-        <div className="work">
+        {/* <div className="work">
           <h3>Work To-Dos</h3>
           <form
             className="work"
@@ -104,7 +104,7 @@ function App() {
           <button className="clear" onClick={() => clearToDo("WorkToDo")}>
             Clear!
           </button>
-        </div>
+        </div> */}
 
         <div className="life">
           <h3>Self Care To-Dos</h3>
