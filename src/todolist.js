@@ -51,15 +51,15 @@ function TodoList({setTodos, listName, todos }){
             <input
               type="text"
               onChange={(e) => setTodo(e.target.value)}
-    
+              value = {todoText}
             />
             <button type="submit">Enter</button>
           </form>
-          <h4></h4>
+          <h4> My {listName} items:</h4>
 
-          <div className="workItems">
-            {todos.WorkToDo.map((Item) => (
-              <div key={Item.id} >
+          <div className={`${listName}Items`}>
+            {(todos[listName] ||).map((item)=> (
+              <div key={Item.id} className="list" >
                 <input
                   type="checkbox"
                   id="completed"
