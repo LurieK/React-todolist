@@ -4,7 +4,6 @@ function useLocalStorageTodos() {
     
 const [todos, setTodos]=useState({});
 
-
 useEffect(()=> {
     try {
         const savedTodos= localStorage.getItem('todos');

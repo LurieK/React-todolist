@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React, {useState} from 'react'; 
 
 function TodoList({setTodos, listName, todos }){
 
@@ -18,7 +18,7 @@ function TodoList({setTodos, listName, todos }){
           [listName]: [...(prevTodos[listName] || []), newTodo],
         }));
     
-        setText("");
+        setTodoText('')
       }
 
       const clearToDos= (listName)=> {
@@ -31,7 +31,6 @@ function TodoList({setTodos, listName, todos }){
       const toggleComplete= (id)=> {
         let updatedTodos = (todos[listName] || []).map((todo) => {
           return todo.id === id ? {... todo, completed: !todo.completed} : todo;
-    
         });
     
         setTodos((prevTodos) => ({
@@ -50,7 +49,7 @@ function TodoList({setTodos, listName, todos }){
           >
             <input
               type="text"
-              onChange={(e) => setTodo(e.target.value)}
+              onChange={(e) => setTodos(e.target.value)}
               value = {todoText}
             />
             <button type="submit">Enter</button>
@@ -58,15 +57,15 @@ function TodoList({setTodos, listName, todos }){
           <h4> My {listName} items:</h4>
 
           <div className={`${listName}Items`}>
-            {(todos[listName] ||).map((item)=> (
-              <div key={Item.id} className="list" >
+            {(todos[listName] ||[]).map((item)=> (
+              <div key={item.id} className="list" >
                 <input
                   type="checkbox"
                   id="completed"
-                  checked={Item.completed}
-                  onChange={() => toggleComplete(Item.id)}
+                  checked={item.completed}
+                  onChange={() => toggleComplete(item.id)}
                 />
-                <div className={Item.completed ? "completed" : `{listName}-text`}>
+                <div className={item.completed ? "completed" : `{listName}-text`}>
                   {item.text}
                 </div>
               </div>
