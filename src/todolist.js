@@ -66,8 +66,8 @@ function TodoList({setTodos, listName, todos }){
                   checked={Item.completed}
                   onChange={() => toggleComplete(Item.id)}
                 />
-                <div className={Item.completed ? "completed" : "text"}>
-                  {Item.text}
+                <div className={Item.completed ? "completed" : `{listName}-text`}>
+                  {item.text}
                 </div>
               </div>
             ))}
