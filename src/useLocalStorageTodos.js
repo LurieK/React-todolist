@@ -13,3 +13,10 @@ use useEffect(()=> {
     }
 }, []);
 
+useEffect (()=> {
+    try {
+        localStorage.setItem('todos', JSON.stringify(todos));
+    }catch (e){
+        console.error('Failed to save todos to localStorage', e);
+    }
+}, [todos]);
