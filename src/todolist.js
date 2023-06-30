@@ -4,7 +4,7 @@ function Todolist({setTodos, listName, todos }){
 
     const [todoText, setTodoText] = useState('');
 
-    function handleSubmit(e)=> {
+    function handleSubmit = (e)=>{
         e.preventDefault();
     
         const newTodo = {
@@ -15,7 +15,7 @@ function Todolist({setTodos, listName, todos }){
     
         setTodos((prevTodos) => ({
           ...prevTodos,
-          [listName]: [...prevTodos[listName], newTodo],
+          [listName]: [...(prevTodos[listName] || []), newTodo],
         }));
     
         setText("");
