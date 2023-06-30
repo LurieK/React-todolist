@@ -1,6 +1,6 @@
 import React from 'react'; 
 
-function Todolist({setTodos, listName, todos }){
+function TodoList({setTodos, listName, todos }){
 
     const [todoText, setTodoText] = useState('');
 
@@ -42,38 +42,38 @@ function Todolist({setTodos, listName, todos }){
 
     return (
 
-        <div className="work">
-          <h3>Work To-Dos</h3>
+        <div >
+          <h3>{listName}</h3>
           <form
-            className="work"
-            onSubmit={(e) => handleSubmit(e, "WorkToDo", worktodo, setWorkTodo)}
+            className={listName}
+            onSubmit={(e) => handleSubmit(e)}
           >
             <input
-              type="todoText"
-              onChange={(e) => setWorkTodo(e.target.value)}
-              value={worktodo}
+              type="text"
+              onChange={(e) => setTodo(e.target.value)}
+    
             />
             <button type="submit">Enter</button>
           </form>
-          <h4>My Work Items:</h4>
+          <h4></h4>
 
           <div className="workItems">
-            {todos.WorkToDo.map((workItem) => (
-              <div key={workItem.id} className="list">
+            {todos.WorkToDo.map((Item) => (
+              <div key={Item.id} >
                 <input
                   type="checkbox"
                   id="completed"
-                  checked={workItem.completed}
-                  onChange={() => toggleComplete(workItem.id, "WorkToDo")}
+                  checked={Item.completed}
+                  onChange={() => toggleComplete(Item.id)}
                 />
-                <div className={workItem.completed ? "completed" : "work-text"}>
-                  {workItem.text}
+                <div className={Item.completed ? "completed" : "text"}>
+                  {Item.text}
                 </div>
               </div>
             ))}
           </div>
 
-          <button className="clear" onClick={() => clearToDo("WorkToDo")}>
+          <button className="clear" onClick={() => clearToDo()}>
             Clear!
           </button>
         </div>
