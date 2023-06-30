@@ -20,3 +20,7 @@ useEffect (()=> {
         console.error('Failed to save todos to localStorage', e);
     }
 }, [todos]);
+
+return [todos, setTodos];
+
+export default useLocalStorageTodos;

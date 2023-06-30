@@ -2,30 +2,30 @@ import React from "react";
 import { useState, useEffect } from "react";
 
 function App() {
-  const initialTodos = () => {
-    const savedLists = localStorage.getItem("todos");
-    const loadedLists = JSON.parse(savedLists);
-    if (loadedLists) {
-      return loadedLists;
-    }
-    return {
-      WorkToDo: [],
-      LifeToDo: [],
-      JoyToDo: [],
-    };
-  };
+  // const initialTodos = () => {
+  //   const savedLists = localStorage.getItem("todos");
+  //   const loadedLists = JSON.parse(savedLists);
+  //   if (loadedLists) {
+  //     return loadedLists;
+  //   }
+  //   return {
+  //     WorkToDo: [],
+  //     LifeToDo: [],
+  //     JoyToDo: [],
+  //   };
+  // };
 
   const [todos, setTodos] = useState(initialTodos);
 
-  useEffect(() => {
-    const listsToSave = { ...todos };
-    const lists = JSON.stringify(listsToSave);
-    localStorage.setItem("todos", lists);
-  }, [todos]);
+  // useEffect(() => {
+  //   const listsToSave = { ...todos };
+  //   const lists = JSON.stringify(listsToSave);
+  //   localStorage.setItem("todos", lists);
+  // }, [todos]);
 
-  const [worktodo, setWorkTodo] = useState("");
-  const [lifetodo, setLifeTodo] = useState("");
-  const [joytodo, setJoyTodo] = useState("");
+  // const [worktodo, setWorkTodo] = useState("");
+  // const [lifetodo, setLifeTodo] = useState("");
+  // const [joytodo, setJoyTodo] = useState("");
 
   function handleSubmit(e, listName, text, setText) {
     e.preventDefault();
