@@ -1,19 +1,8 @@
 import {useState, useEffect} from 'react';
 
 function useLocalStorageTodos() {
-    
-const [todos, setTodos]=useState({});
-
-useEffect(()=> {
-    try {
-        const savedTodos= localStorage.getItem('todos');
-        if (savedTodos){
-        setTodos(JSON.parse(savedTodos));
-        }
-    }catch (e){
-        console.error('Failed to load todos from localSTorage', e); 
-    }
-}, []);
+    const savedTodos = JSON.parse(localStorage.getItem('todos') || '{}');
+    const [todos, setTodos]=useState(savedTodos);
 
 useEffect (()=> {
     try {
