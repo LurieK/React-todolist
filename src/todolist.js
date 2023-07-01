@@ -49,7 +49,7 @@ function TodoList({setTodos, listName, todos }){
           >
             <input
               type="text"
-              onChange={(e) => setTodos(e.target.value)}
+              onChange={(e) => setTodoText(e.target.value)}
               value = {todoText}
             />
             <button type="submit">Enter</button>
@@ -72,7 +72,7 @@ function TodoList({setTodos, listName, todos }){
             ))}
           </div>
 
-          <button className="clear" onClick={() => clearToDos()}>
+          <button className="clear" onClick={() => clearToDos(listName)}>
             Clear!
           </button>
         </div>
