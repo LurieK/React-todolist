@@ -41,7 +41,8 @@ html::before {
     height: 100%;
 }
 
-.work {
+
+/* .work {
     grid-column: 1;
 }
 
@@ -51,7 +52,7 @@ html::before {
 
 .joy {
     grid-column: 3;
-}
+} */
 
 h1 {
     font-family: 'gin', serif;
@@ -77,7 +78,7 @@ button {
     width: 100%;
 }
 
-.work-text,
+/* .work-text,
 .life-text,
 .joy-text {
     font-family: 'Caveat', cursive;
@@ -85,16 +86,16 @@ button {
     font-size: 23px;
     display: flex;
     align-items: center;
-}
+} */
 
-.workItems,
+/* .workItems,
 .lifeItems,
 .joyItems {
     display: flex;
     flex-flow: column;
     align-items: flex-start;
     margin-left: 5rem;
-}
+} */
 
 ul {
     list-style: none;
@@ -168,7 +169,12 @@ form {
         background-size: cover;
     }
 
-    .work {
+    .wrapper {
+        display: flex;
+        flex-flow: column;
+    }
+
+    /* .work {
         grid-row-start: 2;
         grid-column-start: 2;
     }
@@ -185,7 +191,7 @@ form {
 
     h1 {
         font-size: 60px;
-    }
+    } */
 
     .clear {
         padding: 15px;
