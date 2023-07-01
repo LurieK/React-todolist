@@ -30,7 +30,7 @@ function TodoList({setTodos, listName, todos }){
 
       const toggleComplete= (id)=> {
         let updatedTodos = (todos[listName] || []).map((todo) => {
-          return todo.id === id ? {... todo, completed: !todo.completed} : todo;
+          return todo.id === id ? {...todo, completed: !todo.completed} : todo;
         });
     
         setTodos((prevTodos) => ({
@@ -65,7 +65,7 @@ function TodoList({setTodos, listName, todos }){
                   checked={item.completed}
                   onChange={() => toggleComplete(item.id)}
                 />
-                <div className={item.completed ? "completed" : `{listName}-text`}>
+                <div className={item.completed ? "completed" : `${listName}-text`}>
                   {item.text}
                 </div>
               </div>

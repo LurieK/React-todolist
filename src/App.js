@@ -1,7 +1,7 @@
 import React from "react";
 import useLocalStorageTodos from "./useLocalStorageTodos";
 import TodoList from "./todolist"
-import { useState, useEffect } from "react";
+
 
 const LIST_NAMES = ['WorkToDo', "LifeToDo", "JoyToDo"]
 function App() {
