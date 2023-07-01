@@ -54,7 +54,7 @@ function TodoList({setTodos, listName, todos }){
             />
             <button type="submit">Enter</button>
           </form>
-          <h4> My {listName} items:</h4>
+          <h4> My {listName} Items:</h4>
 
           <div className={`${listName}Items`}>
             {(todos[listName] ||[]).map((item)=> (

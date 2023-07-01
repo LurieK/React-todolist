@@ -7,8 +7,7 @@ const [todos, setTodos]=useState({});
 useEffect(()=> {
     try {
         const savedTodos= localStorage.getItem('todos');
-        const loadedList = JSON.parse(savedTodos)
-        if (loadedList){
+        if (savedTodos){
         setTodos(JSON.parse(savedTodos));
         }
     }catch (e){
