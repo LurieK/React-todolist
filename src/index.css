@@ -1,3 +1,7 @@
+/* fix clear button spacing */
+/* fix checkbox and item alignment */
+
+
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
 @font-face {
@@ -42,17 +46,17 @@ html::before {
 }
 
 
-/* .work {
+.Work {
     grid-column: 1;
 }
 
-.life {
+.Life {
     grid-column: 2;
 }
 
-.joy {
+.Pleasure {
     grid-column: 3;
-} */
+}
 
 h1 {
     font-family: 'gin', serif;
@@ -75,27 +79,27 @@ button {
 
 .clear {
     padding: 10px;
-    width: 100%;
+    width: 18rem;
 }
 
-/* .work-text,
-.life-text,
-.joy-text {
+.Work-text,
+.Life-text,
+.Pleasure-text {
     font-family: 'Caveat', cursive;
     font-weight: lighter;
     font-size: 23px;
     display: flex;
     align-items: center;
-} */
+}
 
-/* .workItems,
-.lifeItems,
-.joyItems {
+.Work-text,
+.Life-text,
+.Pleasure-text{
     display: flex;
     flex-flow: column;
     align-items: flex-start;
     margin-left: 5rem;
-} */
+}
 
 ul {
     list-style: none;
@@ -172,6 +176,7 @@ form {
     .wrapper {
         display: flex;
         flex-flow: column;
+        
     }
 
     /* .work {

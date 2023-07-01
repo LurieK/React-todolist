@@ -3,7 +3,7 @@ import useLocalStorageTodos from "./useLocalStorageTodos";
 import TodoList from "./todolist"
 
 
-const LIST_NAMES = ['Work', "Self Care", "Pleasure"]
+const LIST_NAMES = ['Work', "Life", "Pleasure"]
 function App() {
   
 
