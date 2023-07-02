@@ -173,11 +173,15 @@ form {
     }
 
     .wrapper {
-        display: flex;
-        flex-flow: column;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        justify-items: center;
         
     }
 
+    .list-container {
+        grid-column-start: 2;
+    }
     /* .work {
         grid-row-start: 2;
         grid-column-start: 2;
