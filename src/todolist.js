@@ -50,6 +50,7 @@ function TodoList({setTodos, listName, todos }){
             <input
               type="text"
               onChange={(e) => setTodoText(e.target.value)}
+              placeholder= "New Item"
               value = {todoText}
             />
             <button type="submit">Enter</button>
