@@ -41,7 +41,7 @@ function TodoList({setTodos, listName, todos }){
 
     return (
 
-        <div className='list-container'>
+        <div>
           <h3>{listName}</h3>
           <form
             className={listName}
