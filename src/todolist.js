@@ -6,7 +6,9 @@ function TodoList({setTodos, listName, todos }){
 
     const handleSubmit = (e)=>{
         e.preventDefault();
-    
+        if (!todoText.trim()) {
+            return;
+          }
         const newTodo = {
           id: new Date().getTime(),
           text: todoText,
