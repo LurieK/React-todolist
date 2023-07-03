@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/React-todolist/static/css/main.10dc31d5.css",
-    "main.js": "/React-todolist/static/js/main.2b9742f7.js",
+    "main.css": "/React-todolist/static/css/main.6857ad97.css",
+    "main.js": "/React-todolist/static/js/main.e7a4b10b.js",
     "static/js/512.dfcee6c6.chunk.js": "/React-todolist/static/js/512.dfcee6c6.chunk.js",
     "static/media/gabby-conde-sP33SU9vX0k-unsplash.jpg": "/React-todolist/static/media/gabby-conde-sP33SU9vX0k-unsplash.c80062e49dee78c70004.jpg",
     "static/media/Mrs-Eaves-OT-Roman_31443.woff": "/React-todolist/static/media/Mrs-Eaves-OT-Roman_31443.3067f4ef111fbd9d2c21.woff",
     "static/media/GinTest-Regular.woff": "/React-todolist/static/media/GinTest-Regular.c866a370c18fb6cd19c6.woff",
     "index.html": "/React-todolist/index.html",
-    "main.10dc31d5.css.map": "/React-todolist/static/css/main.10dc31d5.css.map",
-    "main.2b9742f7.js.map": "/React-todolist/static/js/main.2b9742f7.js.map",
+    "main.6857ad97.css.map": "/React-todolist/static/css/main.6857ad97.css.map",
+    "main.e7a4b10b.js.map": "/React-todolist/static/js/main.e7a4b10b.js.map",
     "512.dfcee6c6.chunk.js.map": "/React-todolist/static/js/512.dfcee6c6.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.10dc31d5.css",
-    "static/js/main.2b9742f7.js"
+    "static/css/main.6857ad97.css",
+    "static/js/main.e7a4b10b.js"
   ]
 }
