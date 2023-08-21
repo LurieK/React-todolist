@@ -2,6 +2,9 @@
 
 This is a web application that lets users maintain various to-do lists in one place. Using **React**, I've built dynamic components with useState and useEffect hooks to manage state effectively. The app is built with a component-based architecture, allowing for cleaner code and improved reusability. One of the key features of the project is its use of **local storage** and **JSON** for data persistence, meaning the user's to-do items persist even after a page refresh or closing. Additionally, the application has a **responsive design**, making it easy to use on any device. With a strong focus on user interface design and problem-solving, this app delivers a straightforward and satisfying user experience.
 
+<img src="todo_laptop.png" alt="Example Image" width="300"/>
+<img src="todo_mobile.png" alt="Example Image" width="300"/>
+
 ## Usage
 - Creating a Task: To create a new task, enter a title in the input field at the top of the page and press Enter. 
 
