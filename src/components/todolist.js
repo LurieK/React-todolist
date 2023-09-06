@@ -4,13 +4,20 @@ function TodoList({ setTodos, listName, todos }){
 
     const [todoText, setTodoText] = useState('');
 
+    //handleSubmit takes the text entered into state in the JSX below and trims it incase 
+    //users add extra spaces
+    //it then creates a new object newTodos which gets set to todos state. Most of the code is set to check for arrays.
+    //This is because localState is a object of arrays.  In the instinces where the code is checking arrays, it is addressing
+    //a specific list name. 
+    //setTodos checks if there are any items in the specific list text was added to based on the lists name.
+    //It needs to check an empty array, because it is checking against state in localStorage. 
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!todoText.trim()) {
             return;
           }
         const newTodo = {
-          id: new Date().getTime(),
+          id: new Date().getTime(),//basing the id on date avoids repeat ids since users connot create two items at the same time
           text: todoText,
           completed: false,
         };
@@ -22,14 +29,17 @@ function TodoList({ setTodos, listName, todos }){
     
         setTodoText('')
       };
-
+    
+    //Takes in the listName assciated with the clicked clear button, and returns an empty array.
     const clearToDos = (listName) => {
       setTodos((prevTodos) => ({ 
         ...prevTodos, 
         [listName]: [] 
       }));
       }
-
+    
+    //When a item is checked off it is toggled to complete.  This function then maps through todos to check
+    //for the item that shares the same id as the item checked. and the updated items are set to todos and localStorage
     const toggleComplete = (id) => {
       let updatedTodos = (todos[listName] || []).map((todo) => {
         return todo.id === id ? { ...todo, completed: !todo.completed } : todo;
