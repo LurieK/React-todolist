@@ -1,23 +1,24 @@
 import React from "react";
-import useLocalStorageTodos from "./useLocalStorageTodos";
-import TodoList from "./todolist"
+
+import useLocalStorageTodos from "./components/useLocalStorageTodos";
+import TodoList from "./components/todolist"
 
 
-const LIST_NAMES = ['Work', "Life", "Pleasure"]
+const LIST_NAMES = [ 'Work', "Life", "Pleasure" ]
+
 function App() {
   
-
   const [todos, setTodos] = useLocalStorageTodos();
 
   return (
     <div className="App">
       <h1>Daily To-do's</h1>
       <div className="wrapper">
-        {LIST_NAMES.map((listName)=> (
+        {LIST_NAMES.map((listName) => (
           <TodoList
-            key = {listName}
+            key={listName}
             todos={todos}
-            setTodos ={setTodos}
+            setTodos={setTodos}
             listName={listName}
             />
         ))}

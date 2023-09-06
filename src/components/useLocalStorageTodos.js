@@ -1,17 +1,18 @@
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from 'react';
 
 function useLocalStorageTodos() {
+    
     const savedTodos = JSON.parse(localStorage.getItem('todos') || '{}');
-    const [todos, setTodos]=useState(savedTodos);
+    const [todos, setTodos] = useState(savedTodos);
 
-useEffect (()=> {
-    try {
+    useEffect(() => {
+        try {
         localStorage.setItem('todos', JSON.stringify(todos));
-    }catch (e){
+        } catch (e) {
         console.error('Failed to save todos to localStorage', e);
-    }
-}, [todos]);
+        }
+    }, [todos]);
 
-return [todos, setTodos];
+    return [todos, setTodos];
 }
 export default useLocalStorageTodos;
