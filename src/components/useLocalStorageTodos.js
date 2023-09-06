@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react';
 
 function useLocalStorageTodos() {
     
-    //take items in local storage and save them in instate. If there is 
-    //nothing in local storage savedTodos is saved as an empty object. 
-    //*Note* Because I the app handles multiple lists todos must be an objec to of lists.
+    // Take items in local storage and save them in state. If there is 
+    // nothing in local storage, savedTodos is saved as an empty object.
+    // *Note* Because the app handles multiple lists, todos must be an object of lists.
     const savedTodos = JSON.parse(localStorage.getItem('todos') || '{}');
     const [todos, setTodos] = useState(savedTodos);
 

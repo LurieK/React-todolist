@@ -4,24 +4,24 @@ function TodoList({ setTodos, listName, todos }){
 
     const [todoText, setTodoText] = useState('');
 
-    //handleSubmit takes the text entered into state in the JSX below and trims it incase 
-    //users add extra spaces
-    //it then creates a new object newTodos which gets set to todos state. Most of the code is set to check for arrays.
-    //This is because localState is a object of arrays.  In the instinces where the code is checking arrays, it is addressing
-    //a specific list name. 
-    //setTodos checks if there are any items in the specific list text was added to based on the lists name.
-    //It needs to check an empty array, because it is checking against state in localStorage. 
+    // handleSubmit takes the text entered into the state in the JSX below and trims it in case
+    // users add extra spaces. It then creates a new object, newTodo, which gets set to the todos state.
+  
+    // *Note* Most of the code is set to check for arrays. This is because localState is an object of arrays.
+    // In the instances where the code is checking arrays, it is addressing a specific list name.
     const handleSubmit = (e) => {
         e.preventDefault();
         if (!todoText.trim()) {
             return;
           }
         const newTodo = {
-          id: new Date().getTime(),//basing the id on date avoids repeat ids since users connot create two items at the same time
+          id: new Date().getTime(),// basing the id on date avoids repeat ids since users cannot create two items at the same time
           text: todoText,
           completed: false,
         };
-    
+        
+      // setTodos checks if there are any items in the specific list text was added to, based on the list's name.
+      // It needs to check an empty array, because it is checking against state in localStorage.
         setTodos((prevTodos) => ({
           ...prevTodos,
           [listName]: [...(prevTodos[listName] || []), newTodo],
