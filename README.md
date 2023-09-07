@@ -1,6 +1,6 @@
 # Daily To-Dos
 
-This is a web application that lets users maintain various to-do lists in one place. Using **React**, I've built dynamic components with useState and useEffect hooks to manage state effectively. The app is built with a component-based architecture, allowing for cleaner code and improved reusability. One of the key features of the project is its use of **local storage** and **JSON** for data persistence, meaning the user's to-do items persist even after a page refresh or closing. Additionally, the application has a **responsive design**, making it easy to use on any device. With a strong focus on user interface design and problem-solving, this app delivers a straightforward and satisfying user experience.
+This web application maintains multiple to-do lists in one place. Using **React**, I've utilized useState and useEffect hooks to manage state and store lists in localStorage. Additionally, with a focus on user experience the application has a **responsive design**, making it easy to open on any device. 
 
 <div align="center">
   <img src="todo_laptop.png" alt="Example Image" width="300" style="display:inline; margin-right:10px;"/>
@@ -8,9 +8,9 @@ This is a web application that lets users maintain various to-do lists in one pl
 </div>
 
 ## Usage
-- Creating a Task: To create a new task, enter a title in the input field at the top of the page and press Enter. 
+- Creating a Task: To create a new task, enter a title in the input field at the top of the list and press Enter or hit Enter on your keyboard. 
 
-- Marking a Task as Complete: Click on the checkbox next to a task to mark it as complete. Completed tasks will appear crossed out to deliniate them from active tasks.
+- Marking a Task as Complete: Click on the checkbox next to a task to mark it as complete. Completed tasks will appear crossed out.
 
 - Deleting Tasks: To delete tasks, click on the clear button bellow the item list.
 
@@ -43,18 +43,18 @@ To run the application locally, follow these steps:
 
 ### or
 
-to view this site visit https://luriek.github.io/DailyToDos/
+to view this site visit https://luriek.github.io/React-todolist/
 
 ## How to understand this site
 Daily To-Dos is a web application designed to help users organize their day while leaving room for self-care and daily pleasures. The primary goal of the app is to provide a tool that promotes a balanced approach to task management and personal well-being.  
 
-Out side of the traditional daily tasks related to work and business, this app aims to help users plan out a more holistic day that prioritizes all aspects of life. 
+Outside of the traditional daily tasks related to work and business, this app aims to help users plan out a more holistic day that prioritizes all aspects of life. 
 
-### Self-Care
-Self-care encompasses activities that individuals engage in to care for their health, maintain relationships, and keep their home and life running smoothly. React-ToDo allows users to allocate time for essential tasks related to their well-being. Whether it's cleaning the kitchen, picking up a prescription, or making an important phone call to a family member, the app reminds users to prioritize these actions that contribute to their overall health and happiness.
+### Life
+Life encompasses activities that individuals engage in to care for their health, maintain relationships, and keep their home and life running smoothly. React-ToDo allows users to allocate time for essential tasks related to their well-being. Whether it's cleaning the kitchen, picking up a prescription, or making an important phone call to a family member, the app reminds users to prioritize these actions that contribute to their overall health and happiness.
 
 ### Pleasure
-In addition to managing essential tasks, Daily To-dos emphasizes the significance of incorporating enjoyable activities and experiences into daily routines. The app encourages users to embrace and savor the beauty of life by making time for daily pleasures. This could involve watching a breathtaking sunset, working from a favorite café, or indulging in the creation of a beloved dish. By highlighting the importance of such activities, this app promotes a more holistic and fulfilling approach to task management.
+In addition to managing essential tasks, Daily To-dos emphasizes the significance of incorporating enjoyable activities and experiences into daily routines. The app encourages users to embrace and savor the beauty of life by making time for daily pleasures. This could involve watching a breathtaking sunset, working from a favorite café, or indulging in delicious meal. By highlighting the importance of such activities, this app promotes a more holistic and fulfilling approach to task management.
 
 The combination of self-care and daily pleasures within Daily To-Dos aims to provide users with a comprehensive tool for managing tasks and prioritizing their well-being. By incorporating these principles into their daily routines, users can cultivate a sense of balance, fulfillment, and joy in their lives.
 
