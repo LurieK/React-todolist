@@ -1,7 +1,4 @@
 
-
-/* prevent empty items */
-
 @import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
 
 @font-face {
@@ -45,19 +42,6 @@ html::before {
     width: 100%;
     height: 100%;
 }
-
-
-/* .Work {
-    grid-column: 1;
-}
-
-.Life {
-    grid-column: 2;
-}
-
-.Pleasure {
-    grid-column: 3;
-} */
 
 h1 {
     font-family: 'gin', serif;
@@ -183,24 +167,6 @@ form {
     .list-container {
         grid-column-start: 2;
     }
-    /* .work {
-        grid-row-start: 2;
-        grid-column-start: 2;
-    }
-
-    .life {
-        grid-row-start: 3;
-        grid-column-start: 2;
-    }
-
-    .joy {
-        grid-row-start: 4;
-        grid-column-start: 2;
-    }
-
-    h1 {
-        font-size: 60px;
-    } */
 
     .clear {
         padding: 15px;
