@@ -1,6 +1,6 @@
 # Daily To-Dos
 
-This web application maintains multiple to-do lists in one place. Using **React**, I've utilized useState and useEffect hooks to manage state and store lists in localStorage. Additionally, with a focus on user experience the application has a **responsive design**, making it easy to open on any device. 
+This web application maintains multiple to-do lists in one place. Using **React**, I've utilized useState and useEffect hooks to manage the state of each list individually and store items in localStorage. Additionally, with a focus on user experience, the application has a **responsive design**, making it easy to open on any device. 
 
 <div align="center">
   <img src="todo_laptop.png" alt="Example Image" width="300" style="display:inline; margin-right:10px;"/>
