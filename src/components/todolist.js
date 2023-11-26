@@ -1,6 +1,7 @@
 import React, {useState} from 'react'; 
+import trashCan from '../CSS/trash-can.png'
 
-function TodoList({ setTodos, listName, todos }){
+function TodoList({ setTodos, listName, todos, setListNames }){
 
     const [todoText, setTodoText] = useState('');
 
@@ -51,9 +52,10 @@ function TodoList({ setTodos, listName, todos }){
       }));
     }
 
-    const deleteList = (listNameToDelete) => {
+    const deleteList = (thisListName) => {
+      console.log(thisListName)
       setListNames(prevListNames => {
-      return prevListNames.filter(listName => listName !== listNameToDelete);
+      return prevListNames.filter(listName => listName !== thisListName);
   });
 };
 
@@ -65,8 +67,8 @@ function TodoList({ setTodos, listName, todos }){
           <h3 >{listName}</h3>
           <img 
             alt='delete'
-            onClick={deleteList}
-            src='/src/CSS/trash-can.png'></img>
+            onClick={()=> deleteList(listName)}
+            src={trashCan}></img>
         </div>
         <form
           className={listName}

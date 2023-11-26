@@ -11,7 +11,6 @@ function App() {
   const [listNames, setListNames]= useState([])
   const [newListName, setNewListName] = useState('')
 
-  console.log(listNames)
   // Set LocalStorage to handle synchronization. State for todos is handled in useLocalStorage.
   const [todos, setTodos] = useLocalStorageTodos();
 
