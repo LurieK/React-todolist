@@ -1,6 +1,6 @@
 import React from "react";
 import {useState} from 'react'
-import useLocalStorageTodos from "./components/useLocalStorageTodos";
+import useLocalStorage from "./components/useLocalStorage";
 import NewList from "./components/newlist";
 import TodoList from "./components/todolist"
 import ListTitle from "./components/listtitle";
@@ -10,11 +10,11 @@ import ListTitle from "./components/listtitle";
 
 
 function App() {
-  const [listNames, setListNames]= useState([])
+
  
 
   // Set LocalStorage to handle synchronization. State for todos is handled in useLocalStorage.
-  const [todos, setTodos] = useLocalStorageTodos();
+  const { todos, setTodos, listNames, setListNames} = useLocalStorage();
 
 
   //Take the new List name and add it to listNames useState
@@ -41,7 +41,7 @@ function App() {
           <div key={name}>
           <ListTitle  
             listName={name}
-            setListName={setListNames}
+            setListNames={setListNames}
             />
           <TodoList
             key={name}

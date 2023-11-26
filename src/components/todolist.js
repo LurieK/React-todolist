@@ -1,5 +1,5 @@
 import React, {useState} from 'react'; 
-import trashCan from '../CSS/trash-can.png'
+
 
 function TodoList({ setTodos, listName, todos, setListNames }){
 
