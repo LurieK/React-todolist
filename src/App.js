@@ -1,6 +1,7 @@
 import React from "react";
 import {useState} from 'react'
 import useLocalStorageTodos from "./components/useLocalStorageTodos";
+import NewList from "./components/newlist";
 import TodoList from "./components/todolist"
 
 // Created an array of list names to easily manage three working lists.
@@ -9,47 +10,30 @@ import TodoList from "./components/todolist"
 
 function App() {
   const [listNames, setListNames]= useState([])
-  const [newListName, setNewListName] = useState('')
+ 
 
   // Set LocalStorage to handle synchronization. State for todos is handled in useLocalStorage.
   const [todos, setTodos] = useLocalStorageTodos();
 
 
   //Take the new List name and add it to listNames useState
-  function handleTitleSubmit(event){
-    event.preventDefault();
-    if (newListName.trim() && !listNames.includes(newListName)){
+  const addNewListName=(name)=>{
+   
+    if (name && !listNames.includes(name)){
         setListNames(prevListNames =>{
         return[
         ...prevListNames,
-        newListName.trim()
+        name
       ]
     })
     }
-    setNewListName('')
   }
 
-  function handleTitleChange(event){
-  
-      setNewListName(event.target.value)
-  }
 
   return (
     <div className="App">
       <h1>Daily To-do's</h1>
-      
-      <form onSubmit={handleTitleSubmit}>
-      <input
-        className='list-name-input'
-        placeholder='Enter Your List Name'
-        type="text"
-        onChange= {handleTitleChange}
-        value= {newListName}
-      >
-      </input>
-      <button type='submit'>Enter</button>
-      </form>
-
+      <NewList addNewListName={addNewListName} />
       {/* Map over LIST_NAMES and pass in the name of the list and props from localStorage. */}
       <div className="wrapper">
         {listNames.map((name) => (
