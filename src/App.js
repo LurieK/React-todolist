@@ -3,6 +3,7 @@ import {useState} from 'react'
 import useLocalStorageTodos from "./components/useLocalStorageTodos";
 import NewList from "./components/newlist";
 import TodoList from "./components/todolist"
+import ListTitle from "./components/listtitle";
 
 // Created an array of list names to easily manage three working lists.
 
@@ -37,13 +38,19 @@ function App() {
       {/* Map over LIST_NAMES and pass in the name of the list and props from localStorage. */}
       <div className="wrapper">
         {listNames.map((name) => (
+          <div key={name}>
+          <ListTitle  
+            listName={name}
+            setListName={setListNames}
+            />
           <TodoList
             key={name}
             todos={todos}
             setTodos={setTodos}
             listName={name}
-            setListNames={setListNames}
+    
             />
+            </div>
         ))}
       </div>
     </div>
