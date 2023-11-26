@@ -51,10 +51,23 @@ function TodoList({ setTodos, listName, todos }){
       }));
     }
 
+    const deleteList = (listNameToDelete) => {
+      setListNames(prevListNames => {
+      return prevListNames.filter(listName => listName !== listNameToDelete);
+  });
+};
+
+
     return (
 
       <div className='list-container'>
-        <h3>{listName}</h3>
+        <div className='list-name'>
+          <h3 >{listName}</h3>
+          <img 
+            alt='delete'
+            onClick={deleteList}
+            src='/src/CSS/trash-can.png'></img>
+        </div>
         <form
           className={listName}
           onSubmit={(e) => handleSubmit(e)}

@@ -8,35 +8,49 @@ import TodoList from "./components/todolist"
 
 
 function App() {
-  const [listNames, setListNames]= useState([''])
+  const [listNames, setListNames]= useState([])
+  const [newListName, setNewListName] = useState('')
 
   console.log(listNames)
   // Set LocalStorage to handle synchronization. State for todos is handled in useLocalStorage.
   const [todos, setTodos] = useLocalStorageTodos();
 
-  function handleTitleChange(event){
- 
-    const {name, value}=event.target 
-    setListNames(prevListNames =>{
-      return[
+
+  //Take the new List name and add it to listNames useState
+  function handleTitleSubmit(event){
+    event.preventDefault();
+    if (newListName.trim() && !listNames.includes(newListName)){
+        setListNames(prevListNames =>{
+        return[
         ...prevListNames,
-        value
+        newListName.trim()
       ]
     })
+    }
+    setNewListName('')
+  }
+
+  function handleTitleChange(event){
+  
+      setNewListName(event.target.value)
   }
 
   return (
     <div className="App">
       <h1>Daily To-do's</h1>
+      
+      <form onSubmit={handleTitleSubmit}>
       <input
-        className='list-title'
+        className='list-name-input'
         placeholder='Enter Your List Name'
         type="text"
-        
         onChange= {handleTitleChange}
+        value= {newListName}
       >
-  
       </input>
+      <button type='submit'>Enter</button>
+      </form>
+
       {/* Map over LIST_NAMES and pass in the name of the list and props from localStorage. */}
       <div className="wrapper">
         {listNames.map((name) => (
@@ -45,6 +59,7 @@ function App() {
             todos={todos}
             setTodos={setTodos}
             listName={name}
+            setListNames={setListNames}
             />
         ))}
       </div>
