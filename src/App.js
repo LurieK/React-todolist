@@ -8,17 +8,20 @@ import TodoList from "./components/todolist"
 
 
 function App() {
-  const [listNames, setListName]= useState([''])
+  const [listNames, setListNames]= useState([''])
+
+  console.log(listNames)
   // Set LocalStorage to handle synchronization. State for todos is handled in useLocalStorage.
   const [todos, setTodos] = useLocalStorageTodos();
 
-  function handleChange(event){
+  function handleTitleChange(event){
+ 
     const {name, value}=event.target 
-    setListName(prevListName =>{
-      return{
-        ...prevListName,
-        name
-      }
+    setListNames(prevListNames =>{
+      return[
+        ...prevListNames,
+        value
+      ]
     })
   }
 
@@ -28,19 +31,20 @@ function App() {
       <input
         className='list-title'
         placeholder='Enter Your List Name'
-        value={listNames}
         type="text"
-        name="listName"
-        onChange= {handleChange}
-      ></input>
+        
+        onChange= {handleTitleChange}
+      >
+  
+      </input>
       {/* Map over LIST_NAMES and pass in the name of the list and props from localStorage. */}
       <div className="wrapper">
-        {listNames.map((listName) => (
+        {listNames.map((name) => (
           <TodoList
-            key={listName}
+            key={name}
             todos={todos}
             setTodos={setTodos}
-            listName={listName}
+            listName={name}
             />
         ))}
       </div>
