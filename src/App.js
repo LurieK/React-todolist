@@ -48,6 +48,7 @@ function App() {
             todos={todos}
             setTodos={setTodos}
             listName={name}
+            className='lists-items'
     
             />
             </div>

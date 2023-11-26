@@ -21,6 +21,23 @@ body {
     height: 100%;
 }
 
+.list-name{
+    display: flex;
+    flex-flow: row;
+
+}
+.list-name img{
+    display: none;
+    width: 30px;
+    height: 30px;
+    margin-top: 20%;
+    cursor: pointer;
+}
+.list-name:hover img {
+    display: block;
+    
+}
+
 .wrapper {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -67,15 +84,8 @@ button {
     width: 16.55rem;
 }
 
-.Work-text,
-.Life-text,
-.Pleasure-text {
-    font-family: 'Caveat', cursive;
-    font-weight: lighter;
-    font-size: 23px;
-    display: flex;
-    align-items: center;
-}
+
+
 
 .list-container {
     display: flex;
@@ -83,6 +93,16 @@ button {
     flex-flow: column;
    
 }
+
+.list {
+    font-family: 'Caveat', cursive;
+    font-weight: lighter;
+    font-size: 23px;
+    display: flex;
+    align-items: center;
+}
+
+
 
 ul {
     list-style: none;

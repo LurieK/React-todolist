@@ -60,7 +60,7 @@ function TodoList({ setTodos, listName, todos, setListNames }){
       <div className='list-container'>
        
         <form
-          className={listName}
+          className='list-form'
           onSubmit={(e) => handleSubmit(e)}
         >
           <input
